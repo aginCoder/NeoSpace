@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="top-bar">🎁 Freeship cho đơn từ 299.000đ · Quà nhỏ đang chờ bạn!</div>
+
+    <header>
+        <div class="container menu">
+            <a href="#" class="logo">
+                <span class="logo-icon">☀️</span> Mochi Store
+            </a>
+
+            <nav>
+                <a href="#home">Trang chủ</a>
+                <a href="#category">Danh mục</a>
+                <a href="#products">Sản phẩm</a>
+                <a href="#contact">Liên hệ</a>
+            </nav>
+
+            <div class="menu-buttons">
+                <button class="round-button" id="favoriteButton">♡<span class="count" id="favoriteCount">0</span></button>
+                <button class="round-button" id="cartButton">🛒<span class="count" id="cartCount">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-wrap" id="home">
+            <div class="bubble bubble-one"></div>
+            <div class="bubble bubble-two"></div>
+            <div class="bubble bubble-three"></div>
+
+            <div class="container hero">
+                <div class="hero-left">
+                    <div class="small-tag">✨ Bộ sưu tập đáng yêu mới về</div>
+                    <h1>Mua sắm vui như mở một hộp <span>bất ngờ</span></h1>
+                    <p class="hero-text">Những món đồ nhỏ xinh, màu sắc ngọt ngào và đầy năng lượng để mỗi ngày của bạn trở nên vui vẻ hơn một chút.</p>
+
+                    <div class="buttons">
+                        <button class="main-button" id="discoverButton">Khám phá ngay →</button>
+                        <button class="second-button" id="collectionButton">Xem bộ sưu tập</button>
+                    </div>
+
+                    <div class="mini-info">
+                        <div class="info-item">
+                            <span class="info-icon">🚚</span>
+                            <span>Giao hàng nhanh</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💗</span>
+                            <span>Đóng gói xinh xắn</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🌱</span>
+                            <span>Thân thiện môi trường</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="cute-card">
+                        <div class="sale-sticker">SALE<br>20%</div>
+                        <div class="product-picture">
+                            <span class="star star-one">⭐</span>
+                            <span class="product-emoji">🎧</span>
+                            <span class="star star-two">✨</span>
+                        </div>
+                        <div class="card-content">
+                            <h2>Tai nghe Cloudy</h2>
+                            <p>Nhẹ nhàng, êm tai và siêu dễ thương.</p>
+                            <div class="price-row">
+                                <strong>349.000đ</strong>
+                                <button class="add-button" data-name="Tai nghe Cloudy" data-price="349000" data-icon="🎧">＋</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section" id="category">
+            <div class="container">
+                <div class="section-title">
+                    <span>CHỌN THEO SỞ THÍCH</span>
+                    <h2>Danh mục nhỏ xinh</h2>
+                </div>
+
+                <div class="category-list">
+                    <div class="category-card" data-filter="fashion">
+                        <span class="emoji">🎒</span>
+                        <h3>Túi xinh</h3>
+                        <p>Nhỏ gọn và nhiều màu</p>
+                    </div>
+                    <div class="category-card" data-filter="tech">
+                        <span class="emoji">🎧</span>
+                        <h3>Công nghệ</h3>
+                        <p>Tiện lợi nhưng vẫn đáng yêu</p>
+                    </div>
+                    <div class="category-card" data-filter="decor">
+                        <span class="emoji">🧸</span>
+                        <h3>Trang trí</h3>
+                        <p>Làm góc nhỏ thêm vui</p>
+                    </div>
+                    <div class="category-card" data-filter="life">
+                        <span class="emoji">☕</span>
+                        <h3>Đời sống</h3>
+                        <p>Dùng mỗi ngày thật chill</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section" id="products">
+            <div class="container">
+                <div class="section-title">
+                    <span>MÓN ĐƯỢC YÊU THÍCH</span>
+                    <h2>Gian hàng nổi bật</h2>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm món đồ bạn thích...">
+                </div>
+
+                <div class="filter-list">
+                    <button class="filter-button active" data-filter="all">Tất cả</button>
+                    <button class="filter-button" data-filter="fashion">Túi xinh</button>
+                    <button class="filter-button" data-filter="tech">Công nghệ</button>
+                    <button class="filter-button" data-filter="decor">Trang trí</button>
+                    <button class="filter-button" data-filter="life">Đời sống</button>
+                </div>
+
+                <div class="product-list">
+                    <div class="product-card" data-category="fashion" data-name="Túi Lemon">
+                        <button class="heart">♡</button>
+                        <div class="image-box">👜</div>
+                        <div class="product-info">
+                            <h3>Túi Lemon</h3>
+                            <div class="rating">★★★★★</div>
+                            <div class="product-bottom">
+                                <strong>259.000đ</strong>
+                                <button class="small-add" data-name="Túi Lemon" data-price="259000" data-icon="👜">＋</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="tech" data-name="Bàn phím Milk">
+                        <button class="heart">♡</button>
+                        <div class="image-box">⌨️</div>
+                        <div class="product-info">
+                            <h3>Bàn phím Milk</h3>
+                            <div class="rating">★★★★★</div>
+                            <div class="product-bottom">
+                                <strong>599.000đ</strong>
+                                <button class="small-add" data-name="Bàn phím Milk" data-price="599000" data-icon="⌨️">＋</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="decor" data-name="Chậu cây Mầm">
+                        <button class="heart">♡</button>
+                        <div class="image-box">🪴</div>
+                        <div class="product-info">
+                            <h3>Chậu cây Mầm</h3>
+                            <div class="rating">★★★★★</div>
+                            <div class="product-bottom">
+                                <strong>129.000đ</strong>
+                                <button class="small-add" data-name="Chậu cây Mầm" data-price="129000" data-icon="🪴">＋</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="life" data-name="Đèn ngủ Jelly">
+                        <button class="heart">♡</button>
+                        <div class="image-box">💡</div>
+                        <div class="product-info">
+                            <h3>Đèn ngủ Jelly</h3>
+                            <div class="rating">★★★★★</div>
+                            <div class="product-bottom">
+                                <strong>189.000đ</strong>
+                                <button class="small-add" data-name="Đèn ngủ Jelly" data-price="189000" data-icon="💡">＋</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container banner">
+            <div class="banner-text">
+                <h2>Nhận một chiếc hộp quà bí mật 🎁</h2>
+                <p>Đăng ký thành viên mới để nhận mã giảm giá và những món quà nhỏ đầy bất ngờ từ Mochi Store.</p>
+                <button id="giftButton">Nhận quà ngay</button>
+            </div>
+            <div class="banner-emoji">🐻</div>
+            <div class="banner-circle"></div>
+        </section>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="side-panel" id="cartPanel">
+        <div class="panel-top">
+            <h2>Giỏ hàng của bạn</h2>
+            <button class="close-button" id="closeCart">✕</button>
+        </div>
+        <div id="cartList"></div>
+        <div class="cart-total">
+            <span>Tổng cộng</span>
+            <span id="cartTotal">0đ</span>
+        </div>
+        <button class="checkout-button" id="checkoutButton">Thanh toán</button>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="logo">
+                <span class="logo-icon">☀️</span> Mochi Store
+            </div>
+            <p>© 2026 Mochi Store · Một góc mua sắm nhỏ đầy niềm vui</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
